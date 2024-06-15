@@ -3,6 +3,9 @@
     "private": true,
     "version": "0.1.0",
     "type": "module",
+    "scripts":{
+        "build": "vite build --ssr ./src/main.ts"
+    },
     "devDependencies": {
         "elm": "^0.19.1-6",
         "elm-format": "^0.8.7",
