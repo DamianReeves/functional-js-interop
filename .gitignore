@@ -1,0 +1,7 @@
+*.beam
+*.ez
+/build
+erl_crash.dump
+elm-stuff/
+node_modules/
+dist/
