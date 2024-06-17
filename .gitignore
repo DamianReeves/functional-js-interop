@@ -4,4 +4,6 @@
 erl_crash.dump
 elm-stuff/
 node_modules/
-dist/
+dist/
+.metals/
+.vscode/
