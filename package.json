@@ -3,10 +3,11 @@
     "private": true,
     "version": "0.1.0",
     "type": "module",
-    "scripts":{
+    "scripts": {
         "build": "vite build --ssr ./src/main.ts"
     },
     "devDependencies": {
+        "@scala-js/vite-plugin-scalajs": "^1.0.0",
         "elm": "^0.19.1-6",
         "elm-format": "^0.8.7",
         "elm-test-rs": "^3.0.0-5",

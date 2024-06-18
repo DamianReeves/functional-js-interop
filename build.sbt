@@ -1,12 +1,12 @@
-import org.scalajs.linker.interface.ModuleSplitStyle
+import org.scalajs.linker.interface.{ModuleInitializer, ModuleSplitStyle}
 
 lazy val shiny = project.in(file("."))
   .enablePlugins(ScalaJSPlugin) // Enable the Scala.js plugin in this project
   .settings(
     scalaVersion := "3.3.1",
+    scalacOptions ++= Seq("-encoding", "utf-8", "-deprecation", "-feature"),
+//    scalaJSMainModuleInitializer := Some(ModuleInitializer.mainMethod("shiny.Shiny", "Shiny")),
 
-    // Tell Scala.js that this is an application with a main method
-    scalaJSUseMainModuleInitializer := true,
 
     /* Configure Scala.js to emit modules in the optimal way to
      * connect to Vite's incremental reload.
@@ -24,5 +24,7 @@ lazy val shiny = project.in(file("."))
     /* Depend on the scalajs-dom library.
      * It provides static types for the browser DOM APIs.
      */
-    libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "2.4.0",
+    libraryDependencies ++= Seq(
+      "org.scala-js" %%% "scalajs-dom" % "2.8.0"
+    ),
   )
