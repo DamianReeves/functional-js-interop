@@ -1,5 +1,8 @@
 import {main} from './shiny.gleam';
 import {Shiny, MyClass} from 'scalajs:main.js'
+import {addFromFSharp} from './fsharp/Program.fs';
+
+console.log("addFromFSharp", addFromFSharp);
 
 const myClass = MyClass();
 main();

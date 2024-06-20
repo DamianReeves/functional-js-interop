@@ -9,5 +9,6 @@ dist/
 .vscode/
 .idea/
 target/
-
+bin/
+obj/
 metals.sbt
